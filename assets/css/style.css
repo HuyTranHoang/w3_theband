@@ -123,12 +123,38 @@ chiều ngang */
 
 /* Margin top bằng chiều cao của header
 để positon fixed không chiếm nó */
-#slider {
-    margin-top: 46px;
-    min-height: 1500px;
-    background-color: #ccc;
 
+/* padding top 50% = 50% chiều ngang của chính nó, đây là tỉ lệ 2:1 */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('/assets/img/slider/slider.jpg') top center / cover  no-repeat;
+    /* Size cover norepeat */
 }
+
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    /* left: 50%;
+    transform: translateX(-50%);
+     Cách center 1*/
+    /* left:0; right: 0; Cách center 2 */
+}
+
+#slider .text-heading {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+#slider .text-description {
+    font-size: 15px;
+    margin-top: 25px;
+}
+
 
 #content {
 
