@@ -7,6 +7,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -23,6 +24,7 @@ html {
 4. Kiểu dáng (kiểu chữ, hình tròn, vuông, ...)
  */
 
+ /* Common */
 .clear {
     clear: both;
 }
@@ -31,6 +33,69 @@ html {
     color: #fff !important;
 }
 
+.text-center {
+    text-align: center !important;
+}
+
+.pull-right{
+    float: right !important;
+}
+
+.btn {
+    color: #fff;
+    background-color: #000;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 15px;
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    color: #000;
+    background-color: #ccc;
+}
+
+.mt-8 {
+    margin-top: 8px !important;
+}
+
+.mt-16 {
+    margin-top: 16px !important;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+/* Thay thế dev thật tự động clear after */
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-half {
+    width: 50%;
+}
+
+.col-third {
+    width: 33.33333%;
+}
+
+/* Main */
 #main {
 
 }
@@ -170,7 +235,7 @@ chiều ngang */
 
 #content .content-section {
     width: 800px;
-    padding: 64px 0;
+    padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
     /* Margin left right auto ==> Đẩy ra giữa */
@@ -203,12 +268,6 @@ chiều ngang */
 }
 #content .member-name {
     font-size: 15px;
-}
-
-#content .member-item {
-    float: left;
-    width: 33.33333%;
-    text-align: center;
 }
 
 #content .member-img {
@@ -258,14 +317,7 @@ chiều ngang */
 
 /* Places  */
 .place-list {
-    margin: 32px -8px 0;
-    padding-bottom: 48px;
-}
-
-.place-item {
-    float: left;
-    width: 33.33333%;
-    padding: 0 8px;
+    margin-top: 32px;
 }
 
 .place-img {
@@ -300,23 +352,68 @@ chiều ngang */
     line-height: 1.4;
 }
 
-.place-buy-btn {
-    color: #fff;
-    background-color: #000;
-    text-decoration: none;
-    padding: 11px 16px;
-    display: inline-block;
-    margin-top: 15px;
+/* Contact Form */
+
+.contact-content {
+    margin-top: 48px;
 }
 
-.place-buy-btn:hover {
-    color: #000;
-    background-color: #ccc;
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* Icon nên dùng width thay vì margin để tránh lỗi font không bằng nhau */
+.contact-info i[class*="ti-"] 
+{
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+}
+
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+/* Map section */
+
+.map-section img{
+    width: 100%;
+
 }
 
 /* Footer section */
 #footer {
+    padding: 64px 16px;
+    text-align: center;
 
+}
+
+#footer .socials-list {
+    font-size: 24px;
+}
+
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .socials-list a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+#footer .copy-right {
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer .copy-right a {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .modal {
