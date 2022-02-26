@@ -235,9 +235,12 @@ chiều ngang */
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding: 64px 0 112px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
     /* Margin left right auto ==> Đẩy ra giữa */
 }
 
@@ -521,3 +524,14 @@ chiều ngang */
         transform: translateY(0);
     }
 }
+
+/* Độ rộng tối đa 800px thì CSS này sẽ chạy */
+@media (max-width:800px) {
+    /* CSS */
+}
+
+/*  
+    PC: >= 1024px 
+    Tablet: >=740px & < 1024
+    Mobile: <740px 
+*/
