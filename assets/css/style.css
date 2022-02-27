@@ -101,12 +101,15 @@ html {
 }
 
 #header {
-    height: 46px;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    height: 46px;
     background-color: #000;
-    position: fixed;
+    z-index: 1;
+    overflow: hidden;
+    /* Cái gì tràn ra khỏi cha thì hidden */
 }
 
 /* Do có tính chất block nên nó lấy hết chiều ngang 
@@ -129,7 +132,6 @@ không có. Sửa từ display inline thành block để nav
 có thể hover full. Hoặc tách ra đem len trên */
 /* CSS này để những nav trên header  nằm ngang */
 #nav li {
-    
     position: relative;
 }
 
@@ -179,6 +181,7 @@ có thể hover full. Hoặc tách ra đem len trên */
 /* Float thì sẽ mất tính năng kế thừa chiếm toàn bộ c
 chiều ngang */
 
+#header .mobile-menu-btn,
 #header .search-btn {
     float: right;
     padding: 0 21px;   
@@ -188,6 +191,16 @@ chiều ngang */
     cursor: pointer;
     background-color: #f44336;
 }
+
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+}
+
+#header .mobile-menu-btn:hover .menu-icon {
+    color: #000;
+}
+
+#header .menu-icon,
 #header .search-icon {
     color: #fff;
     font-size: 20px;
@@ -242,6 +255,7 @@ chiều ngang */
     padding-left: 16px;
     padding-right: 16px;
     /* Margin left right auto ==> Đẩy ra giữa */
+    /* Paddiing để cân bằng margin âm cho tablet */
 }
 
 #content .section-heading {
@@ -525,13 +539,3 @@ chiều ngang */
     }
 }
 
-/* Độ rộng tối đa 800px thì CSS này sẽ chạy */
-@media (max-width:800px) {
-    /* CSS */
-}
-
-/*  
-    PC: >= 1024px 
-    Tablet: >=740px & < 1024
-    Mobile: <740px 
-*/

@@ -1,0 +1,20 @@
+/* Độ rộng tối đa 800px thì CSS này sẽ chạy */
+@media (max-width:800px) {
+    /* CSS */
+}
+
+/*  
+    PC: >= 1024px 
+    Tablet: >=740px & < 1024
+    Mobile: <740px 
+*/
+
+@media (max-width: 740px) {
+    #nav > li {
+        display: block;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+}
