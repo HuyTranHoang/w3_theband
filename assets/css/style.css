@@ -50,6 +50,11 @@ html {
     margin-top: 15px;
     border: none;
     text-align: center;
+    /* Sửa nút trên iphone lỗi, cái này dùng cho mọi web bt
+    appearance: none; 
+    webkit cho safari*/
+    -webkit-appearance: none;
+    
 }
 
 .btn:hover {
